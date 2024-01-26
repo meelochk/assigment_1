@@ -1,29 +1,47 @@
-### IntelliJ IDEA ###
-out/
+# Проект в IntelliJ IDEA
+/out/
+/production/
+/dependencies/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
-### Eclipse ###
+# Eclipse - Настройки и бинарные файлы
 .apt_generated
 .classpath
 .factorypath
 .project
-.settings
+.settings/
 .springBeans
-.sts4-cache
-bin/
+.sts4-cache/
+/bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
-### NetBeans ###
+# NetBeans - Вспомогательные файлы и папки
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
 
-### VS Code ###
+# Visual Studio Code - Конфигурационные файлы
 .vscode/
 
-### Mac OS ###
+# Mac OS - Скрытые системные файлы
 .DS_Store
+
+# Дополнительные временные файлы
+*.iml
+*.log
+*.swp
+*~
+
+# Компиляция Java
+*.class
+
+# Gradle
+.gradle/
+/build/
+
+# Maven
+/target/
