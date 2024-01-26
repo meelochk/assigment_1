@@ -1,38 +1,41 @@
-package com.fxdj;
+package com.example;
 
-public class Shape {
-    private Point[] points;
-    private double perim;
-    public Shape(Point[] points) {
-        this.points = points;
+public class MyGeometry {
+    private MyPoint[] vertices;
+    private double perimeterValue;
+
+    public MyGeometry(MyPoint[] vertices) {
+        this.vertices = vertices;
     }
 
-    public double perimeter() {
+    public double calculatePerimeter() {
         double perimeter = 0;
-        int len = points.length;
-        for (int i = 0; i < len; i++) {
-            Point currentPoint = points[i];
-            Point nextPoint = points[(i + 1) % len];
-            perimeter += currentPoint.distanceTo(nextPoint);
+        int length = vertices.length;
+
+        for (int i = 0; i < length; i++) {
+            MyPoint currentVertex = vertices[i];
+            MyPoint nextVertex = vertices[(i + 1) % length];
+            perimeter += currentVertex.calculateDistanceTo(nextVertex);
         }
-        this.perim = perimeter;
+
+        this.perimeterValue = perimeter;
         return perimeter;
     }
 
-
-    public double averageSide() {
-            int numOfSides = points.length;
-            return (perim/numOfSides);
+    public double findAverageSide() {
+        int numOfSides = vertices.length;
+        return (perimeterValue / numOfSides);
     }
 
-    public double longestSide() {
+    public double findLongestSide() {
         double longestSide = 0;
-        for (int i = 0; i < points.length; i++) {
-            Point currentPoint = points[i];
-            Point nextPoint = points[(i + 1) % points.length];
-            longestSide = Math.max(currentPoint.distanceTo(nextPoint), longestSide);
 
+        for (int i = 0; i < vertices.length; i++) {
+            MyPoint currentVertex = vertices[i];
+            MyPoint nextVertex = vertices[(i + 1) % vertices.length];
+            longestSide = Math.max(currentVertex.calculateDistanceTo(nextVertex), longestSide);
         }
+
         return longestSide;
     }
 }
