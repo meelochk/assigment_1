@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class MyApplication {
+public class MyApp {
     public static void main(String[] args) {
-        // Specify the file path on your desktop
+        // Set the file path on your desktop
         String filePath = "/Users/Acer/Desktop/source.txt"; // Replace with your actual file path
 
         try {
